@@ -9,4 +9,5 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install -r backend/requirements.txt pytest
       - run: cd backend && python -m pytest -q
+      - run: node --check worker/src/index.js
       - run: docker build ./backend

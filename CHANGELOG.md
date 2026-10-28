@@ -7,3 +7,6 @@
 - Docs, tests, CI, accessibility, SEO
 ## v2
 - Agent swarm, hybrid RAG, graph, CNN, MCP, vault and audit, Kubernetes
+## v5
+- Cloudflare edge deployment: Pages (site) + Worker API with Workers AI, Vectorize, KV
+- New Analyze tab (structured AI risk review), Worker swarm, semantic RAG, response cache, Workers AI fallback

@@ -1,0 +1,17 @@
+name = "aetheris-api"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+[ai]
+binding = "AI"
+
+[vars]
+ALLOWED_ORIGINS = "https://nikhil-creat.github.io,https://aetheris-ai.pages.dev"
+
+# Stage 2 power-ups: create these in the dashboard first, then uncomment and push.
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "PASTE_KV_NAMESPACE_ID"
+# [[vectorize]]
+# binding = "VEC"
+# index_name = "aetheris-kb"
