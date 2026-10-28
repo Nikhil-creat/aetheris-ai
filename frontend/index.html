@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://db.onlinewebfonts.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://db.onlinewebfonts.com https://cdnjs.cloudflare.com data:; media-src https://d8j0ntlcm91z4.cloudfront.net; img-src 'self' data: blob:; connect-src http://localhost:8000 https://*.onrender.com https://*.fly.dev https://*.hf.space https://api.groq.com https://generativelanguage.googleapis.com; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
-<title>Intelligence Designed To Evolve</title>
+<meta name="description" content="Aetheris AI: sovereign agentic AI platform with Groq and Gemini gateway, hybrid RAG, agent swarm, CNN vision, MCP and zero-trust security."><meta name="theme-color" content="#000000"><meta property="og:type" content="website"><meta property="og:title" content="Aetheris AI - Intelligence Designed To Evolve"><meta property="og:description" content="Agentic AI, RAG, CNN, MCP and zero-trust security on a Groq + Gemini gateway."><meta name="twitter:card" content="summary"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%23fff%27/%3E%3Cpath d=%27M32 12 16 50h8l8-20 8 20h8z%27/%3E%3C/svg%3E"><title>Intelligence Designed To Evolve</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -92,16 +92,17 @@ body.menu-open{overflow:hidden}
 .grid h3{font-size:15px;font-weight:600;margin-bottom:6px}.grid p,.sec p{color:#b5b5b5;font-size:14px;line-height:1.6}
 .ft{position:relative;z-index:1;background:#000;border-top:1px solid #2a2a2c;padding:36px clamp(16px,5vw,64px);color:var(--muted);font-size:13px}
 .ft div{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between}.ft a:hover{color:#fff}.ft nav{display:flex;gap:20px;flex-wrap:wrap}
+.skip{position:absolute;left:-999px;top:8px;z-index:9;background:#fff;color:#000;padding:10px 16px;border-radius:999px;font-weight:600}.skip:focus{left:8px}:focus-visible{outline:2px solid #fff;outline-offset:3px}.nav a:focus-visible,.mmenu a:focus-visible,.cta:focus-visible{outline-color:#6aa8ff}
 </style>
 </head>
-<body>
+<body><a class="skip" href="#features">Skip to content</a>
 <div class="bg"><video class="bg-video" autoplay muted loop playsinline><source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260809_012548_ef22562c-c0ae-4816-ad9d-f8922af4e6a7.mp4" type="video/mp4"></video></div>
 <div class="page">
 <header class="header">
 <a class="logo" href="#" aria-label="Aetheris AI"><img alt="" width="52" height="52" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 6 8 56h10l14-32 14 32h10z' fill='%23000'/%3E%3Ccircle cx='32' cy='44' r='5' fill='%23000'/%3E%3C/svg%3E"></a>
 <nav class="nav"><a class="on" href="#">Home</a><a href="#features">Product</a><a href="#architecture">Case Studies</a><a href="#contact">Contact</a></nav>
 <a class="signin" href="#" data-tab="keys">Sign in</a>
-<button class="burger" id="bg" aria-expanded="false" aria-label="Menu"><i></i><i></i><i></i></button>
+<button class="burger" id="bg" aria-controls="mm" aria-expanded="false" aria-label="Menu"><i></i><i></i><i></i></button>
 </header>
 <div class="ov" id="ov" hidden></div>
 <div class="mmenu" id="mm" hidden><a class="on" href="#">Home</a><a href="#features">Product</a><a href="#architecture">Case Studies</a><a href="#contact">Contact</a><a class="signin" href="#" data-tab="keys">Sign in</a></div>
@@ -131,12 +132,13 @@ body.menu-open{overflow:hidden}
 <div><h3>2. Guard</h3><p>FastAPI filters injection, redacts personal data and rate-limits by IP.</p></div>
 <div><h3>3. Retrieve</h3><p>TF-IDF today; Qdrant and Neo4j in the full build.</p></div>
 <div><h3>4. Route</h3><p>Groq or Gemini answers. If one fails, the other takes over.</p></div></div></div></section>
+<section class="sec" id="stack"><div><h2>Built with</h2><div class="grid"><div><h3>AI</h3><p>Groq, Gemini, LangGraph, PyTorch, Qdrant, Neo4j.</p></div><div><h3>Backend</h3><p>FastAPI, Pydantic, httpx, Fernet vault, hash-chained audit.</p></div><div><h3>Delivery</h3><p>Docker Compose, Kubernetes with autoscaling, GitHub Actions CI and Pages.</p></div><div><h3>Roadmap</h3><p>Zero-knowledge proofs, Wasm sandbox, semantic cache, JWT roles.</p></div></div></div></section>
 <section class="sec" id="contact"><div><h2>Build with Aetheris</h2><p>Created by Nikhil Chary Sriramoju. Open the console, add a free key, and ask anything about the platform.</p></div></section>
-<footer class="ft"><div><span>&copy; 2026 Aetheris AI</span><nav><a href="#features">Product</a><a href="#architecture">Architecture</a><a href="https://github.com/Nikhil-creat" rel="noopener">GitHub</a></nav><span>Free-tier models. Answers can be wrong.</span></div></footer>
-<section class="con" id="con" hidden>
+<footer class="ft"><div><span>&copy; 2026 Aetheris AI</span><nav><a href="#features">Product</a><a href="#architecture">Architecture</a><a href="https://github.com/Nikhil-creat/aetheris-ai" rel="noopener">GitHub</a><a href="https://github.com/Nikhil-creat/aetheris-ai/blob/main/docs/ARCHITECTURE.md" rel="noopener">Docs</a><a href="https://github.com/Nikhil-creat/aetheris-ai/blob/main/SECURITY.md" rel="noopener">Security</a></nav><span>Free-tier models. Answers can be wrong.</span></div></footer>
+<section class="con" id="con" role="dialog" aria-label="Aetheris console" hidden>
 <header>Aetheris Console <button id="x" aria-label="Close">&times;</button></header>
 <div class="tabs"><button data-tab="chat" class="on">Assistant</button><button data-tab="keys">Keys</button><button data-tab="swarm">Swarm</button><button data-tab="cnn">Vision</button><button data-tab="sec">Security</button></div>
-<div class="pane on" id="p-chat"><div id="log"><div class="msg a">I'm the Aetheris assistant. Add a free Groq or Gemini key under Keys, then ask about the platform. Try "calc: 12*(3+4)".</div></div></div>
+<div class="pane on" id="p-chat"><div id="log" aria-live="polite"><div class="msg a">I'm the Aetheris assistant. Add a free Groq or Gemini key under Keys, then ask about the platform. Try "calc: 12*(3+4)".</div></div></div>
 <div class="pane" id="p-keys">
 <label>Groq API key (free, console.groq.com)</label><input id="kg" type="password" autocomplete="off" placeholder="gsk_...">
 <label>Gemini API key (free, aistudio.google.com)</label><input id="kq" type="password" autocomplete="off" placeholder="AIza...">
@@ -144,9 +146,9 @@ body.menu-open{overflow:hidden}
 <button class="btn" id="det">Save &amp; auto-detect models</button>
 <div id="mods" class="note"></div>
 <p class="note">Keys stay in your browser and go only to api.groq.com and generativelanguage.googleapis.com.</p></div>
-<div class="pane" id="p-swarm"><p>Four specialist agents (compliance, security, FinOps, architecture) plan together, then a judge scores the plan. Needs the Backend URL under Keys.</p><input id="sw" maxlength="600" placeholder="e.g. Review our API launch for risks"><button class="btn" id="swr">Run swarm</button><div id="swo" class="msg a" style="margin-top:10px" hidden></div></div><div class="pane" id="p-cnn"><p>Runs a 3x3 Sobel convolution (the first layer of a CNN) fully in your browser. Nothing is uploaded.</p><input type="file" id="img" accept="image/*"><canvas id="cv" width="300" height="200"></canvas><canvas id="cv2" width="300" height="200"></canvas><p class="note" id="cnote"></p></div>
+<div class="pane" id="p-swarm"><p>Four specialist agents (compliance, security, FinOps, architecture) plan together, then a judge scores the plan. Needs the Backend URL under Keys.</p><input aria-label="Swarm task" id="sw" maxlength="600" placeholder="e.g. Review our API launch for risks"><button class="btn" id="swr">Run swarm</button><div id="swo" class="msg a" style="margin-top:10px" hidden></div></div><div class="pane" id="p-cnn"><p>Runs a 3x3 Sobel convolution (the first layer of a CNN) fully in your browser. Nothing is uploaded.</p><input aria-label="Choose an image" type="file" id="img" accept="image/*"><canvas id="cv" width="300" height="200"></canvas><canvas id="cv2" width="300" height="200"></canvas><p class="note" id="cnote"></p></div>
 <div class="pane" id="p-sec"><p><b>Built in:</b> strict Content-Security-Policy (only Groq and Gemini can be called), no-referrer, prompt-injection filter, email/phone redaction before sending, 600-character input cap, 20 requests per minute limit, text rendered as plain text (no HTML injection), keys never in the code.</p><p class="note"><b>Limits:</b> a static site cannot hide a key from the person using it. Free-tier quotas apply, answers can be wrong, and the knowledge base is a small built-in sample. For shared or production use, move calls behind a server proxy (see the guide).</p></div>
-<div class="row" id="inrow"><input id="q" maxlength="600" placeholder="Ask Aetheris..." autocomplete="off"><button id="send">Send</button></div>
+<div class="row" id="inrow"><input aria-label="Message" id="q" maxlength="600" placeholder="Ask Aetheris..." autocomplete="off"><button id="send">Send</button></div>
 </section>
 
 <script>
@@ -165,7 +167,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return
 setTimeout(()=>{const t0=performance.now();(function f(n){const p=Math.min(1,(n-t0)/dur);el.textContent=(T*ease(p)).toFixed(D)+el.dataset.s;if(p<1)requestAnimationFrame(f)})(t0)},480+i*90)}),{threshold:.25});
 $$('.st b').forEach(b=>io.observe(b));
 /* console */
-function tab(n){$('#con').hidden=false;menu(false);$$('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===n));$$('.pane').forEach(p=>p.classList.toggle('on',p.id==='p-'+n));$('#inrow').hidden=n!=='chat'}
+function tab(n){$('#con').hidden=false;menu(false);$$('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===n));$$('.pane').forEach(p=>p.classList.toggle('on',p.id==='p-'+n));$('#inrow').hidden=n!=='chat';$('.tabs button.on').focus()}
 $$('[data-tab]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();tab(b.dataset.tab==='rag'?'chat':b.dataset.tab)}));
 $('#go').onclick=()=>tab('chat');$('#x').onclick=()=>$('#con').hidden=true;
 /* keys + model auto-detect */

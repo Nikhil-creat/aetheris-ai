@@ -1,9 +1,39 @@
 # Aetheris AI - Intelligence Designed To Evolve
-Frontend (static, GitHub Pages) + FastAPI backend (Groq + Gemini, RAG, guardrails). Built by Nikhil Chary Sriramoju.
+[![CI](https://github.com/Nikhil-creat/aetheris-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/Nikhil-creat/aetheris-ai/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Local: `cp .env.example .env` (add keys) then `docker compose up --build` -> web :8080, api :8000.
-Never commit `.env`. Deploy the backend (Render/Fly) with the env vars, then paste its URL in the site's Keys tab.
+Sovereign multi-modal agentic AI platform: a Groq + Gemini gateway with automatic model detection, hybrid RAG, a temporal knowledge graph, a LangGraph agent swarm, CNN vision, an MCP server and a zero-trust security layer.
+**Live demo:** https://nikhil-creat.github.io/aetheris-ai/
 
-## v2 modules
-Swarm (LangGraph + RLAIF judge) /api/swarm | Hybrid RAG (Qdrant + lexical) | Temporal graph (Neo4j or in-memory) | CNN /api/vision (build ML=1) | MCP /mcp (set MCP_TOKEN) | Fernet vault + hash-chained audit /api/audit/verify | Kyber /api/pqc/kem (needs liboqs) | k8s/aetheris.yaml
-Not built yet: ZK proofs, Wasm sandbox, Redis semantic cache, K8s operator, JWT/RBAC.
+## Features
+| Area | What it does |
+|---|---|
+| Gateway | Auto-detects current Groq and Gemini models, fails over between them |
+| RAG | Qdrant vectors + keyword search, with sources returned |
+| Graph | Temporal edges (relation + since) in Neo4j or in-memory |
+| Agents | Four-role LangGraph swarm and an LLM judge score |
+| Vision | PyTorch CNN feature maps (optional build) and an in-browser Sobel demo |
+| MCP | JSON-RPC tools for Claude Desktop / Cursor, token-protected |
+| Security | CSP, guardrails, rate limits, encrypted vault, tamper-evident audit log |
+
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [SECURITY.md](SECURITY.md).
+
+## Quick start
+```
+cp .env.example .env      # add GROQ_API_KEY and GEMINI_API_KEY
+docker compose up --build # web :8080, api :8000
+cd backend && python -m pytest -q
+```
+Frontend only: open `frontend/index.html`, add a key under Keys.
+
+## API
+`GET /api/health` | `POST /api/chat` | `POST /api/swarm` | `POST /api/vision` | `GET /api/audit/verify` | `GET /api/pqc/kem` | `POST /mcp`
+
+## Configuration
+`GROQ_API_KEY`, `GEMINI_API_KEY`, `ALLOWED_ORIGINS`, `APP_API_KEY`, `MCP_TOKEN`, `VAULT_KEY`, `QDRANT_URL`, `NEO4J_URI`, `NEO4J_PASSWORD`.
+
+## Roadmap
+Not built yet: zero-knowledge proofs, Wasm sandbox, Redis semantic cache, Kubernetes operator, JWT/RBAC, semantic embeddings.
+
+## Author
+Nikhil Chary Sriramoju - B.Tech CSE, Vaagdevi College of Engineering. MIT licensed.
