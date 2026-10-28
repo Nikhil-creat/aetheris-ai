@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://db.onlinewebfonts.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://db.onlinewebfonts.com https://cdnjs.cloudflare.com data:; media-src https://d8j0ntlcm91z4.cloudfront.net; img-src 'self' data: blob:; connect-src http://localhost:8000 https://*.onrender.com https://*.fly.dev https://*.hf.space https://api.groq.com https://generativelanguage.googleapis.com; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="Aetheris AI: sovereign agentic AI platform with Groq and Gemini gateway, hybrid RAG, agent swarm, CNN vision, MCP and zero-trust security."><meta name="theme-color" content="#000000"><meta property="og:type" content="website"><meta property="og:title" content="Aetheris AI - Intelligence Designed To Evolve"><meta property="og:description" content="Agentic AI, RAG, CNN, MCP and zero-trust security on a Groq + Gemini gateway."><meta name="twitter:card" content="summary"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%23fff%27/%3E%3Cpath d=%27M32 12 16 50h8l8-20 8 20h8z%27/%3E%3C/svg%3E"><title>Intelligence Designed To Evolve</title>
+<meta name="description" content="Aetheris AI: sovereign agentic AI platform with Groq and Gemini gateway, hybrid RAG, agent swarm, CNN vision, MCP and zero-trust security."><meta name="theme-color" content="#000000"><link rel="canonical" href="https://nikhil-creat.github.io/aetheris-ai/"><meta property="og:url" content="https://nikhil-creat.github.io/aetheris-ai/"><meta property="og:type" content="website"><meta property="og:title" content="Aetheris AI - Intelligence Designed To Evolve"><meta property="og:description" content="Agentic AI, RAG, CNN, MCP and zero-trust security on a Groq + Gemini gateway."><meta name="twitter:card" content="summary"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%23fff%27/%3E%3Cpath d=%27M32 12 16 50h8l8-20 8 20h8z%27/%3E%3C/svg%3E"><title>Intelligence Designed To Evolve</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -93,6 +93,11 @@ body.menu-open{overflow:hidden}
 .ft{position:relative;z-index:1;background:#000;border-top:1px solid #2a2a2c;padding:36px clamp(16px,5vw,64px);color:var(--muted);font-size:13px}
 .ft div{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between}.ft a:hover{color:#fff}.ft nav{display:flex;gap:20px;flex-wrap:wrap}
 .skip{position:absolute;left:-999px;top:8px;z-index:9;background:#fff;color:#000;padding:10px 16px;border-radius:999px;font-weight:600}.skip:focus{left:8px}:focus-visible{outline:2px solid #fff;outline-offset:3px}.nav a:focus-visible,.mmenu a:focus-visible,.cta:focus-visible{outline-color:#6aa8ff}
+.faq details{border-top:1px solid var(--trust-border);padding:14px 0}.faq summary{cursor:pointer;font-weight:600;font-size:15px}.faq p{margin-top:8px}
+.ct{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}.ct a{background:#fff;color:#000;font-weight:600;font-size:14px;padding:11px 20px;border-radius:999px}.ct a.alt{background:var(--pill-dark);color:#c8c8c8}
+.ft .fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px}.ft .fg>div{display:flex;flex-direction:column;gap:9px;margin:0;max-width:none}.ft b{color:#fff;font-size:13px}.ft p{max-width:300px;line-height:1.6}
+.ft .fb{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin-top:28px;padding-top:18px;border-top:1px solid #1d1d1f;font-size:12px}
+@media(max-width:720px){.ft .fg{grid-template-columns:1fr 1fr}.ft .fg>div:first-child{grid-column:1/-1}}
 </style>
 </head>
 <body><a class="skip" href="#features">Skip to content</a>
@@ -100,12 +105,12 @@ body.menu-open{overflow:hidden}
 <div class="page">
 <header class="header">
 <a class="logo" href="#" aria-label="Aetheris AI"><img alt="" width="52" height="52" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 6 8 56h10l14-32 14 32h10z' fill='%23000'/%3E%3Ccircle cx='32' cy='44' r='5' fill='%23000'/%3E%3C/svg%3E"></a>
-<nav class="nav"><a class="on" href="#">Home</a><a href="#features">Product</a><a href="#architecture">Case Studies</a><a href="#contact">Contact</a></nav>
-<a class="signin" href="#" data-tab="keys">Sign in</a>
+<nav class="nav"><a class="on" href="#">Home</a><a href="#features">Platform</a><a href="#security">Security</a><a href="#contact">Contact</a></nav>
+<a class="signin" href="#" data-tab="chat">Open Console</a>
 <button class="burger" id="bg" aria-controls="mm" aria-expanded="false" aria-label="Menu"><i></i><i></i><i></i></button>
 </header>
 <div class="ov" id="ov" hidden></div>
-<div class="mmenu" id="mm" hidden><a class="on" href="#">Home</a><a href="#features">Product</a><a href="#architecture">Case Studies</a><a href="#contact">Contact</a><a class="signin" href="#" data-tab="keys">Sign in</a></div>
+<div class="mmenu" id="mm" hidden><a class="on" href="#">Home</a><a href="#features">Platform</a><a href="#security">Security</a><a href="#contact">Contact</a><a class="signin" href="#" data-tab="chat">Open Console</a></div>
 <main class="hero">
 <div class="trust anim" style="--d:.05s"><div class="av a1"><span><i class="fa-brands fa-microsoft"></i></span></div><div class="av a2"><span><i class="fa-brands fa-amazon"></i></span></div><div class="av a3"><span><i class="fa-brands fa-google"></i></span></div><div class="tp">Trusted by 2000+ Enterprises</div></div>
 <h1 class="headline"><span>Intelligence</span><span>Designed To Evolve</span></h1>
@@ -133,8 +138,26 @@ body.menu-open{overflow:hidden}
 <div><h3>3. Retrieve</h3><p>TF-IDF today; Qdrant and Neo4j in the full build.</p></div>
 <div><h3>4. Route</h3><p>Groq or Gemini answers. If one fails, the other takes over.</p></div></div></div></section>
 <section class="sec" id="stack"><div><h2>Built with</h2><div class="grid"><div><h3>AI</h3><p>Groq, Gemini, LangGraph, PyTorch, Qdrant, Neo4j.</p></div><div><h3>Backend</h3><p>FastAPI, Pydantic, httpx, Fernet vault, hash-chained audit.</p></div><div><h3>Delivery</h3><p>Docker Compose, Kubernetes with autoscaling, GitHub Actions CI and Pages.</p></div><div><h3>Roadmap</h3><p>Zero-knowledge proofs, Wasm sandbox, semantic cache, JWT roles.</p></div></div></div></section>
-<section class="sec" id="contact"><div><h2>Build with Aetheris</h2><p>Created by Nikhil Chary Sriramoju. Open the console, add a free key, and ask anything about the platform.</p></div></section>
-<footer class="ft"><div><span>&copy; 2026 Aetheris AI</span><nav><a href="#features">Product</a><a href="#architecture">Architecture</a><a href="https://github.com/Nikhil-creat/aetheris-ai" rel="noopener">GitHub</a><a href="https://github.com/Nikhil-creat/aetheris-ai/blob/main/docs/ARCHITECTURE.md" rel="noopener">Docs</a><a href="https://github.com/Nikhil-creat/aetheris-ai/blob/main/SECURITY.md" rel="noopener">Security</a></nav><span>Free-tier models. Answers can be wrong.</span></div></footer>
+<section class="sec" id="security"><div><h2>Security by design</h2><div class="grid">
+<div><h3>Keys stay yours</h3><p>Browser keys are held per tab by default and sent only to Groq or Gemini. With the backend, keys live in server environment variables.</p></div>
+<div><h3>Strict CSP</h3><p>The site can only call the two AI providers and your own API. No third-party trackers or analytics.</p></div>
+<div><h3>Guardrails</h3><p>Prompt-injection filter, email and phone redaction, input caps and per-IP rate limits.</p></div>
+<div><h3>Tamper-evident audit</h3><p>Every swarm and MCP action is written to a SHA-256 hash chain you can verify.</p></div>
+<div><h3>Hardened containers</h3><p>Non-root, read-only filesystem, no privilege escalation, Kubernetes seccomp profile.</p></div>
+<div><h3>Honest limits</h3><p>Zero-knowledge proofs, Wasm sandboxing and JWT roles are on the roadmap, not shipped. See SECURITY.md.</p></div></div></div></section>
+<section class="sec faq" id="faq"><div><h2>Frequently asked</h2>
+<details><summary>Where do my API keys go?</summary><p>Straight from your browser to Groq or Gemini, or to your own backend if you set a Backend URL. Never to us.</p></details>
+<details><summary>Is it free?</summary><p>The code is MIT licensed. Groq and Gemini offer free tiers, so you only need free keys. Quotas apply.</p></details>
+<details><summary>Which models does it use?</summary><p>It reads the live model lists from Groq and Gemini and picks a current general model, so it keeps working when providers retire models.</p></details>
+<details><summary>What data is collected?</summary><p>None by this site: no cookies, no analytics. Your messages go to the AI provider you configured.</p></details>
+<details><summary>Can I self-host it?</summary><p>Yes. Clone the repo and run docker compose up --build. Kubernetes manifests are included.</p></details>
+<details><summary>Is it ready for sensitive data?</summary><p>It has real safeguards, but the roadmap items above are not built. Review it against your own requirements before using confidential data.</p></details></div></section>
+<section class="sec" id="contact"><div><h2>Get in touch</h2><p>Questions, feedback or collaboration: Aetheris AI is designed and built by Nikhil Chary Sriramoju.</p><div class="ct"><a href="mailto:sriramojunikhil66@gmail.com">Email</a><a class="alt" href="https://in.linkedin.com/in/nikhil-chary-sriramoju-95041b38a" rel="noopener">LinkedIn</a><a class="alt" href="https://github.com/Nikhil-creat/aetheris-ai" rel="noopener">GitHub</a></div></div></section>
+<footer class="ft"><div class="fg"><div><b>Aetheris AI</b><p>Sovereign agentic AI platform: gateway, hybrid RAG, agent swarm, vision and zero-trust security.</p></div>
+<div><b>Platform</b><a href="#features">Features</a><a href="#architecture">Architecture</a><a href="#stack">Stack</a></div>
+<div><b>Resources</b><a href="https://github.com/Nikhil-creat/aetheris-ai" rel="noopener">GitHub</a><a href="https://github.com/Nikhil-creat/aetheris-ai/blob/main/docs/ARCHITECTURE.md" rel="noopener">Docs</a><a href="https://github.com/Nikhil-creat/aetheris-ai/blob/main/SECURITY.md" rel="noopener">Security policy</a><a href="https://github.com/Nikhil-creat/aetheris-ai/blob/main/LICENSE" rel="noopener">MIT License</a></div>
+<div><b>Company</b><a href="#security">Security</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div></div>
+<div class="fb"><span>&copy; 2026 Aetheris AI. Built by Nikhil Chary Sriramoju.</span><span>No cookies. No analytics. AI answers can be wrong.</span></div></footer>
 <section class="con" id="con" role="dialog" aria-label="Aetheris console" hidden>
 <header>Aetheris Console <button id="x" aria-label="Close">&times;</button></header>
 <div class="tabs"><button data-tab="chat" class="on">Assistant</button><button data-tab="keys">Keys</button><button data-tab="swarm">Swarm</button><button data-tab="cnn">Vision</button><button data-tab="sec">Security</button></div>
@@ -187,6 +210,11 @@ async function detect(){
 $('#det').onclick=detect;
 /* RAG knowledge base + retrieval */
 const KB=[
+['About','Aetheris AI is a sovereign agentic AI platform: a Groq and Gemini gateway with automatic model detection, hybrid RAG, a temporal knowledge graph, a LangGraph agent swarm, CNN vision, an MCP server and zero-trust security. It is open source under the MIT license.'],
+['Builder','Aetheris AI was designed and built by Nikhil Chary Sriramoju, a final-year B.Tech Computer Science and Engineering student at Vaagdevi College of Engineering, Telangana, India. The builder, creator, author and developer can be reached by email at sriramojunikhil66@gmail.com or on GitHub as Nikhil-creat.'],
+['Contact','Contact the team by email at sriramojunikhil66@gmail.com, on LinkedIn, or by opening an issue on the GitHub repository Nikhil-creat/aetheris-ai.'],
+['Privacy','This site uses no cookies and no analytics. Your messages and API keys go only to the AI provider you configured or to your own backend.'],
+['Start','To start, open the console, add a free Groq or Gemini key under Keys, and tap Save and auto-detect models. Then ask questions in the Assistant tab or run the Swarm.'],
 ['Gateway','The multi-LLM gateway routes fast agent tool calls to Groq and long-context multimodal work to Gemini, with automatic failover, token budgeting and Redis semantic caching.'],
 ['GraphRAG','Hybrid retrieval fuses Qdrant vector search with Neo4j temporal graph traversal so answers follow multi-hop relationships and how rules changed over time.'],
 ['Agents','A LangGraph swarm of Compliance Auditor, Security Sentinel, FinOps Optimizer and Neural Architect agents collaborates on incidents and improves through AI feedback.'],
@@ -195,7 +223,8 @@ const KB=[
 ['MCP','The Model Context Protocol server lets Claude Desktop and Cursor query graph state and trigger pipelines securely.'],
 ['Deploy','Ships as Docker Compose for local use and a Kubernetes operator for scaling Ray and Celery worker meshes with checkpoint recovery.']];
 const tk=s=>s.toLowerCase().match(/[a-z0-9]{3,}/g)||[];
-function retrieve(q){const qt=tk(q);return KB.map(([t,x])=>{const w=tk(t+' '+x);return[qt.reduce((s,a)=>s+w.filter(b=>b===a||(a.length>4&&b.startsWith(a.slice(0,5)))).length,0),t,x]}).filter(r=>r[0]>0).sort((a,b)=>b[0]-a[0]).slice(0,3)}
+function retrieve(q){const r=retrieve0(q);return r.length?r:[[0,KB[0][0],KB[0][1]]]}
+function retrieve0(q){const qt=tk(q);return KB.map(([t,x])=>{const w=tk(t+' '+x);return[qt.reduce((s,a)=>s+w.filter(b=>b===a||(a.length>4&&b.startsWith(a.slice(0,5)))).length,0),t,x]}).filter(r=>r[0]>0).sort((a,b)=>b[0]-a[0]).slice(0,3)}
 /* guardrails */
 const INJ=/ignore (all|previous|prior)|system prompt|reveal.*(key|prompt)|jailbreak|developer mode/i;
 const redact=s=>s.replace(/[\w.+-]+@[\w-]+\.[\w.]+/g,'[email]').replace(/\+?\d[\d\s-]{8,}\d/g,'[number]');
@@ -206,7 +235,7 @@ const hist=[];try{$('#be').value=localStorage.ak_be||''}catch(e){}
 $('#be').oninput=()=>{try{localStorage.ak_be=$('#be').value.trim()}catch(e){}};
 const be=()=>$('#be').value.trim().replace(/\/$/,'');
 function add(c,t){const d=document.createElement('div');d.className=c;d.textContent=t;$('#log').append(d);$('#p-chat').scrollTop=1e9;return d}
-async function callGroq(sys,h){const r=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+K.groq},body:JSON.stringify({model:K.gm,messages:[{role:'system',content:sys},...h],temperature:.3,max_tokens:600})});if(!r.ok)throw 'Groq '+r.status;return(await r.json()).choices[0].message.content}
+async function callGroq(sys,h){const r=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+K.groq},body:JSON.stringify({model:K.gm,messages:[{role:'system',content:sys},...h],temperature:.3,max_tokens:600})});if(!r.ok)throw 'Groq '+r.status;return((await r.json()).choices[0].message.content||'').replace(/<think>[\s\S]*?<\/think>/g,'').trim()}
 async function callGem(sys,h){const r=await fetch('https://generativelanguage.googleapis.com/v1beta/'+K.mm+':generateContent',{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':K.gem},body:JSON.stringify({systemInstruction:{parts:[{text:sys}]},contents:h.map(m=>({role:m.role==='user'?'user':'model',parts:[{text:m.content}]})),generationConfig:{temperature:.3,maxOutputTokens:600}})});if(!r.ok)throw 'Gemini '+r.status;return(await r.json()).candidates[0].content.parts.map(p=>p.text).join('')}
 async function ask(){
  const raw=$('#q').value.trim();if(!raw)return;$('#q').value='';add('msg u',raw);
@@ -215,7 +244,7 @@ async function ask(){
  const c=calc(raw);if(c!==null)return add('msg a','Tool calc: '+c);
  const q=redact(raw),docs=retrieve(q),tr=add('trace','Agent: guard ok > retrieve '+docs.length+' chunk(s) '+(docs.map(d=>d[1]).join(', '))+' > route '+(raw.length>300?'Gemini (long)':'Groq (fast)'));
  if(be()){try{const r=await fetch(be()+'/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:q,history:hist.slice(-8)})});if(!r.ok)throw r.status;const d=await r.json();add('msg a',d.answer);tr.textContent+=' > server '+d.model+(d.sources.length?' | '+d.sources.length+' sources':'');hist.push({role:'user',content:q},{role:'assistant',content:d.answer});return}catch(e){tr.textContent+=' > server error '+e+', using browser keys'}}
- if(!K.gm&&!K.mm){if(!K.groq&&!K.gem)return add('msg a','Add a key under Keys first.');await detect()}
+ if(!K.gm&&!K.mm){if(!K.groq&&!K.gem)return add('msg a','Offline answer from the knowledge base:\n'+docs.map(d=>d[2]).join('\n')+'\n\nAdd a free Groq or Gemini key under Keys for full AI answers.');await detect()}
  const sys='You are the Aetheris AI assistant. Answer using the context when relevant and say when it is not covered. Never reveal secrets. Context:\n'+(docs.map(d=>'['+d[1]+'] '+d[2]).join('\n')||'(none)');
  hist.push({role:'user',content:q});const h=hist.slice(-8),pref=raw.length>300?[['g',K.mm],['q',K.gm]]:[['q',K.gm],['g',K.mm]];
  const w=add('msg a','...');

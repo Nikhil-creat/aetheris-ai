@@ -11,3 +11,7 @@ Security includes post-quantum cryptography, AES-256 vault encryption, mTLS betw
 The Model Context Protocol server lets Claude Desktop and Cursor query graph state and trigger pipelines securely.
 
 Aetheris ships as Docker Compose locally and a Kubernetes operator for scaling worker meshes with checkpoint recovery.
+
+Aetheris AI was designed and built by Nikhil Chary Sriramoju, a final-year B.Tech Computer Science and Engineering student at Vaagdevi College of Engineering, Telangana, India. The builder, creator and author can be reached on GitHub as Nikhil-creat.
+
+To start, add a free Groq or Gemini key, let the platform auto-detect models, then ask questions or run the agent swarm. The project is open source under the MIT license.
