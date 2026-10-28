@@ -5,6 +5,9 @@
 Sovereign multi-modal agentic AI platform: a Groq + Gemini gateway with automatic model detection, hybrid RAG, a temporal knowledge graph, a LangGraph agent swarm, CNN vision, an MCP server and a zero-trust security layer.
 **Live demo:** https://nikhil-creat.github.io/aetheris-ai/
 
+## Gallery
+![Overview](docs/linkedin/slide-1.png) ![Live](docs/linkedin/slide-2.png) ![Pipeline](docs/linkedin/slide-3.png)
+
 ## Features
 | Area | What it does |
 |---|---|

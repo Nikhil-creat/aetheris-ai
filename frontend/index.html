@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://db.onlinewebfonts.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://db.onlinewebfonts.com https://cdnjs.cloudflare.com data:; media-src https://d8j0ntlcm91z4.cloudfront.net; img-src 'self' data: blob:; connect-src https://*.workers.dev http://localhost:8000 https://*.onrender.com https://*.fly.dev https://*.hf.space https://api.groq.com https://generativelanguage.googleapis.com; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="Aetheris AI: sovereign agentic AI platform with Groq and Gemini gateway, hybrid RAG, agent swarm, CNN vision, MCP and zero-trust security."><meta name="theme-color" content="#000000"><link rel="canonical" href="https://nikhil-creat.github.io/aetheris-ai/"><meta property="og:url" content="https://nikhil-creat.github.io/aetheris-ai/"><meta property="og:type" content="website"><meta property="og:title" content="Aetheris AI - Intelligence Designed To Evolve"><meta property="og:description" content="Agentic AI, RAG, CNN, MCP and zero-trust security on a Groq + Gemini gateway."><meta name="twitter:card" content="summary"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%23fff%27/%3E%3Cpath d=%27M32 12 16 50h8l8-20 8 20h8z%27/%3E%3C/svg%3E"><title>Intelligence Designed To Evolve</title>
+<meta name="description" content="Aetheris AI: sovereign agentic AI platform with Groq and Gemini gateway, hybrid RAG, agent swarm, CNN vision, MCP and zero-trust security."><meta name="theme-color" content="#000000"><link rel="manifest" href="manifest.webmanifest"><meta name="author" content="Nikhil Chary Sriramoju"><meta property="og:image" content="https://nikhil-creat.github.io/aetheris-ai/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Aetheris AI","codeRepository":"https://github.com/Nikhil-creat/aetheris-ai","license":"https://opensource.org/licenses/MIT","programmingLanguage":["Python","JavaScript"],"author":{"@type":"Person","name":"Nikhil Chary Sriramoju"}}</script><link rel="canonical" href="https://nikhil-creat.github.io/aetheris-ai/"><meta property="og:url" content="https://nikhil-creat.github.io/aetheris-ai/"><meta property="og:type" content="website"><meta property="og:title" content="Aetheris AI - Intelligence Designed To Evolve"><meta property="og:description" content="Agentic AI, RAG, CNN, MCP and zero-trust security on a Groq + Gemini gateway."><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%23fff%27/%3E%3Cpath d=%27M32 12 16 50h8l8-20 8 20h8z%27/%3E%3C/svg%3E"><title>Intelligence Designed To Evolve</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -99,6 +99,9 @@ body.menu-open{overflow:hidden}
 .ft .fb{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin-top:28px;padding-top:18px;border-top:1px solid #1d1d1f;font-size:12px}
 @media(max-width:720px){.ft .fg{grid-template-columns:1fr 1fr}.ft .fg>div:first-child{grid-column:1/-1}}
 .tabs{overflow-x:auto}.tabs button{flex:0 0 auto;padding:8px 14px}.pane textarea{width:100%;padding:10px 12px;border-radius:12px;border:1px solid #333;background:#161618;color:#fff;font:inherit}
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}.steps li{border:1px solid rgba(255,255,255,.4);border-radius:16px;padding:14px;animation:lit 7.2s infinite;animation-delay:calc(var(--i)*1.2s)}.steps b{display:block;font-size:14px;margin-bottom:4px}.steps span{font-size:12.5px;color:#b5b5b5}
+@keyframes lit{0%,14%{background:rgba(255,255,255,.14);border-color:#fff}15%,100%{background:transparent;border-color:rgba(255,255,255,.4)}}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:8px 12px 0}.chips button{flex:0 0 auto;font-size:12px;padding:7px 12px;border-radius:999px;background:#1c1c1e;color:#c8c8c8;border:1px solid #2a2a2c}
 </style>
 <script src="config.js"></script>
 </head>
@@ -114,14 +117,14 @@ body.menu-open{overflow:hidden}
 <div class="ov" id="ov" hidden></div>
 <div class="mmenu" id="mm" hidden><a class="on" href="#">Home</a><a href="#features">Platform</a><a href="#security">Security</a><a href="#contact">Contact</a><a class="signin" href="#" data-tab="chat">Open Console</a></div>
 <main class="hero">
-<div class="trust anim" style="--d:.05s"><div class="av a1"><span><i class="fa-brands fa-microsoft"></i></span></div><div class="av a2"><span><i class="fa-brands fa-amazon"></i></span></div><div class="av a3"><span><i class="fa-brands fa-google"></i></span></div><div class="tp">Trusted by 2000+ Enterprises</div></div>
+<div class="trust anim" style="--d:.05s"><div class="av a1"><span><i class="fa-brands fa-python"></i></span></div><div class="av a2"><span><i class="fa-brands fa-docker"></i></span></div><div class="av a3"><span><i class="fa-brands fa-github"></i></span></div><div class="tp">Open source &middot; MIT licensed</div></div>
 <h1 class="headline"><span>Intelligence</span><span>Designed To Evolve</span></h1>
 <p class="sub anim" style="--d:.28s">Build applications that reason, adapt and collaborate using a modular AI platform designed for production.</p>
 <button class="cta anim pulse" style="--d:.4s" id="go">Get Started</button>
 </main>
 <footer class="stats">
-<div class="st anim" style="--d:.5s"><i>&lt;</i><b data-t="120" data-s="ms" data-d="0">0ms</b><small>Inference Time</small></div>
-<div class="st anim" style="--d:.58s"><i>%</i><b data-t="99.99" data-s="%" data-d="2">0%</b><small>Platform Uptime</small></div>
+<div class="st anim" style="--d:.5s"><i>&lt;</i><b data-t="120" data-s="ms" data-d="0">0ms</b><small>Inference Target</small></div>
+<div class="st anim" style="--d:.58s"><i>%</i><b data-t="99.99" data-s="%" data-d="2">0%</b><small>Uptime Target</small></div>
 <div class="st anim" style="--d:.66s"><i>*</i><b data-t="24" data-s="/7" data-d="0">0/7</b><small>Autonomous Runtime</small></div>
 <div class="st anim" style="--d:.74s"><i>#</i><b data-t="2.4" data-s="M" data-d="1">0M</b><small>Context Windows</small></div>
 </footer>
@@ -134,6 +137,10 @@ body.menu-open{overflow:hidden}
 <div><h3>Vision</h3><p>CNN feature maps for diagrams, layouts and telemetry heatmaps. Try it in the console.</p></div>
 <div><h3>Zero-trust security</h3><p>Post-quantum key exchange, mTLS, encrypted vault, sandboxed scripts and audit logs.</p></div>
 <div><h3>MCP ready</h3><p>Connect Claude Desktop or Cursor to query graph state and run pipelines.</p></div></div></div></section>
+<section class="sec" id="pipeline"><div><h2>Watch a request think</h2><p>Every question travels through the same guarded pipeline.</p><ol class="steps" style="margin-top:22px">
+<li style="--i:0"><b>1 Guard</b><span>Injection filter, redaction, rate limit</span></li><li style="--i:1"><b>2 Retrieve</b><span>Vector and graph context</span></li>
+<li style="--i:2"><b>3 Route</b><span>Groq, Gemini or edge AI</span></li><li style="--i:3"><b>4 Swarm</b><span>Four agents plan together</span></li>
+<li style="--i:4"><b>5 Judge</b><span>AI scores the plan</span></li><li style="--i:5"><b>6 Audit</b><span>Hash-chained log</span></li></ol></div></section>
 <section class="sec" id="architecture"><div><h2>How a request flows</h2><div class="grid">
 <div><h3>1. Edge</h3><p>Nginx serves the site and applies security headers.</p></div>
 <div><h3>2. Guard</h3><p>FastAPI filters injection, redacts personal data and rate-limits by IP.</p></div>
@@ -161,7 +168,7 @@ body.menu-open{overflow:hidden}
 <div><b>Company</b><a href="#security">Security</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div></div>
 <div class="fb"><span>&copy; 2026 Aetheris AI. Built by Nikhil Chary Sriramoju.</span><span>No cookies. No analytics. AI answers can be wrong.</span></div></footer>
 <section class="con" id="con" role="dialog" aria-label="Aetheris console" hidden>
-<header>Aetheris Console <button id="x" aria-label="Close">&times;</button></header>
+<header>Aetheris Console <span><button id="ex" style="font-size:13px;margin-right:14px">Export</button><button id="x" aria-label="Close">&times;</button></span></header>
 <div class="tabs"><button data-tab="chat" class="on">Assistant</button><button data-tab="keys">Keys</button><button data-tab="swarm">Swarm</button><button data-tab="analyze">Analyze</button><button data-tab="cnn">Vision</button><button data-tab="sec">Security</button></div>
 <div class="pane on" id="p-chat"><div id="log" aria-live="polite"><div class="msg a">I'm the Aetheris assistant. Add a free Groq or Gemini key under Keys, then ask about the platform. Try "calc: 12*(3+4)".</div></div></div>
 <div class="pane" id="p-keys">
@@ -173,7 +180,7 @@ body.menu-open{overflow:hidden}
 <p class="note">Keys stay in your browser and go only to api.groq.com and generativelanguage.googleapis.com.</p></div>
 <div class="pane" id="p-swarm"><p>Four specialist agents (compliance, security, FinOps, architecture) plan together, then a judge scores the plan. Needs the Backend URL under Keys.</p><input aria-label="Swarm task" id="sw" maxlength="600" placeholder="e.g. Review our API launch for risks"><button class="btn" id="swr">Run swarm</button><div id="swo" class="msg a" style="margin-top:10px" hidden></div></div><div class="pane" id="p-analyze"><p>Paste a policy, config, log or code snippet. The AI returns a structured risk review with fixes. Uses your API (Worker or backend).</p><textarea id="an" rows="6" maxlength="3000" aria-label="Text to analyze"></textarea><button class="btn" id="anr">Analyze</button><div id="ano" class="msg a" style="margin-top:10px" hidden></div></div><div class="pane" id="p-cnn"><p>Runs a 3x3 Sobel convolution (the first layer of a CNN) fully in your browser. Nothing is uploaded.</p><input aria-label="Choose an image" type="file" id="img" accept="image/*"><canvas id="cv" width="300" height="200"></canvas><canvas id="cv2" width="300" height="200"></canvas><p class="note" id="cnote"></p></div>
 <div class="pane" id="p-sec"><p><b>Built in:</b> strict Content-Security-Policy (only Groq and Gemini can be called), no-referrer, prompt-injection filter, email/phone redaction before sending, 600-character input cap, 20 requests per minute limit, text rendered as plain text (no HTML injection), keys never in the code.</p><p class="note"><b>Limits:</b> a static site cannot hide a key from the person using it. Free-tier quotas apply, answers can be wrong, and the knowledge base is a small built-in sample. For shared or production use, move calls behind a server proxy (see the guide).</p></div>
-<div class="row" id="inrow"><input aria-label="Message" id="q" maxlength="600" placeholder="Ask Aetheris..." autocomplete="off"><button id="send">Send</button></div>
+<div class="chips" id="chips"><button>Who built Aetheris?</button><button>What is the agent swarm?</button><button>How is it secured?</button><button>How do I deploy it?</button></div><div class="row" id="inrow"><input aria-label="Message" id="q" maxlength="600" placeholder="Ask Aetheris..." autocomplete="off"><button id="mic" aria-label="Voice input">Mic</button><button id="send">Send</button></div>
 </section>
 
 <script>
@@ -192,7 +199,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return
 setTimeout(()=>{const t0=performance.now();(function f(n){const p=Math.min(1,(n-t0)/dur);el.textContent=(T*ease(p)).toFixed(D)+el.dataset.s;if(p<1)requestAnimationFrame(f)})(t0)},480+i*90)}),{threshold:.25});
 $$('.st b').forEach(b=>io.observe(b));
 /* console */
-function tab(n){$('#con').hidden=false;menu(false);$$('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===n));$$('.pane').forEach(p=>p.classList.toggle('on',p.id==='p-'+n));$('#inrow').hidden=n!=='chat';$('.tabs button.on').focus()}
+function tab(n){$('#con').hidden=false;menu(false);$$('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===n));$$('.pane').forEach(p=>p.classList.toggle('on',p.id==='p-'+n));$('#inrow').hidden=$('#chips').hidden=n!=='chat';$('.tabs button.on').focus()}
 $$('[data-tab]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();tab(b.dataset.tab==='rag'?'chat':b.dataset.tab)}));
 $('#go').onclick=()=>tab('chat');$('#x').onclick=()=>$('#con').hidden=true;
 /* keys + model auto-detect */
@@ -264,6 +271,10 @@ $('#img').onchange=e=>{const f=e.target.files[0];if(!f)return;const im=new Image
  $('#cv2').getContext('2d').putImageData(o,0,0);$('#cnote').textContent='Edge feature map. Mean activation '+(sum/6e4).toFixed(1)+'. A real CNN stacks many learned kernels like this one.'};im.src=URL.createObjectURL(f)};
 $('#swr').onclick=async()=>{const o=$('#swo');o.hidden=false;if(!be())return o.textContent='Set a Backend URL under Keys first.';o.textContent='Agents working...';try{const r=await fetch(be()+'/api/swarm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({task:$('#sw').value})});if(!r.ok)throw r.status;const d=await r.json();o.textContent=d.notes.join('\n\n')+'\n\nPLAN ('+d.engine+', judge score '+d.score+'/10):\n'+d.plan}catch(e){o.textContent='Swarm failed: '+e}};
 $('#anr').onclick=async()=>{const o=$('#ano');o.hidden=false;if(!be())return o.textContent='Set a Backend URL under Keys (or config.js) first.';o.textContent='Analyzing...';try{const r=await fetch(be()+'/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:$('#an').value})});if(!r.ok)throw r.status;const d=await r.json();o.textContent='RISK: '+String(d.risk).toUpperCase()+'\n'+d.summary+'\n\n'+(d.findings||[]).map((f,i)=>(i+1)+'. ['+f.severity+'] '+f.issue+'\n   Fix: '+f.fix).join('\n')}catch(e){o.textContent='Analyze failed: '+e}};
+$$('#chips button').forEach(b=>b.onclick=()=>{$('#q').value=b.textContent;ask()});
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(SR){$('#mic').onclick=()=>{const r=new SR();r.lang='en-IN';r.onresult=e=>{$('#q').value=e.results[0][0].transcript;ask()};r.start()}}else $('#mic').hidden=true;
+$('#ex').onclick=()=>{const t='# Aetheris chat\n\n'+[...$('#log').children].map(d=>(d.className==='msg u'?'**You:** ':d.className==='trace'?'_Trace:_ ':'**Aetheris:** ')+d.textContent).join('\n\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/markdown'}));a.download='aetheris-chat.md';a.click()};
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 </script>
 </body>
 </html>
