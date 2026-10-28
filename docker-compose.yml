@@ -1,0 +1,24 @@
+services:
+  api:
+    build: { context: ./backend, args: { ML: "0" } }   # "1" adds the PyTorch CNN
+    env_file: .env
+    environment: { QDRANT_URL: "http://qdrant:6333", NEO4J_URI: "bolt://neo4j:7687" }
+    ports: ["8000:8000"]
+    read_only: true
+    tmpfs: ["/tmp"]
+    security_opt: ["no-new-privileges:true"]
+    depends_on: [qdrant, neo4j]
+    restart: unless-stopped
+  qdrant:
+    image: qdrant/qdrant:v1.12.4
+    volumes: ["qdrant:/qdrant/storage"]
+  neo4j:
+    image: neo4j:5
+    environment: { NEO4J_AUTH: "neo4j/${NEO4J_PASSWORD}" }
+    volumes: ["neo4j:/data"]
+  web:
+    build: ./frontend
+    ports: ["8080:80"]
+    depends_on: [api]
+    restart: unless-stopped
+volumes: { qdrant: {}, neo4j: {} }

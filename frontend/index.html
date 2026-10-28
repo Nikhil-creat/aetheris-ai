@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://db.onlinewebfonts.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://db.onlinewebfonts.com https://cdnjs.cloudflare.com data:; media-src https://d8j0ntlcm91z4.cloudfront.net; img-src 'self' data: blob:; connect-src http://localhost:8000 https://*.onrender.com https://*.fly.dev https://*.hf.space https://api.groq.com https://generativelanguage.googleapis.com; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Intelligence Designed To Evolve</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<style>
+@font-face{font-family:"Geist Pixel Circle";src:url(fonts/GeistPixel-Circle.woff2) format("woff2");font-weight:400;font-display:swap}
+:root{--bg:#000;--text:#fff;--muted:#8e8e8e;--nav-text:#2e2e2e;--pill-dark:#28282a;--sign-in-text:#c8c8c8;--nav-shadow:0 4px 14px rgba(0,0,0,.16);--trust-bg:#28282a;--trust-border:rgba(255,255,255,.4);--trust-text:#c4c2c3;--font-sans:"Inter","Segoe UI",system-ui,sans-serif;--font-display:"BubbledotICG-FinePos","Geist Pixel Circle",monospace}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}body{position:relative;overflow-x:hidden}html,body{background:var(--bg);color:var(--text);font-family:var(--font-sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;border:0}
+.bg{position:fixed;inset:0;background:#000;overflow:hidden}
+.bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;z-index:0}
+.page{position:relative;display:flex;flex-direction:column;align-items:center;height:100vh;height:100dvh;overflow:hidden;padding:clamp(16px,2.4vh,28px) clamp(14px,3vw,32px)}
+.header,.hero,.stats,.mmenu,.ov{z-index:1;position:relative}
+.header{display:flex;align-items:center;justify-content:center;gap:clamp(18px,2.8vw,28px);width:100%;max-width:720px;flex-shrink:0;animation:slideDown .7s cubic-bezier(.22,1,.36,1) both}
+.logo{width:clamp(40px,4.4vw,46px);height:clamp(40px,4.4vw,46px);border-radius:50%;background:#fff;box-shadow:var(--nav-shadow);display:grid;place-items:center;transition:transform .3s}
+.logo:hover{transform:scale(1.04)}.logo img{width:72%;height:72%;object-fit:contain}
+.nav{flex:1;max-width:430px;height:clamp(44px,5.2vw,48px);background:#fff;border-radius:999px;box-shadow:var(--nav-shadow);display:flex;align-items:center;justify-content:space-around;padding:4px 8px}
+.nav a{position:relative;font-weight:500;font-size:clamp(13px,1.4vw,15px);letter-spacing:-.01em;color:var(--nav-text);opacity:.5;transition:opacity .2s;padding:6px 4px}
+.nav a:hover{opacity:.75}.nav a.on{opacity:1}
+.nav a.on::after,.mmenu a.on::after{content:"";position:absolute;left:50%;bottom:-5px;width:3px;height:3px;border-radius:50%;background:#000;transform:translateX(-50%);box-shadow:-5px 0 #000,5px 0 #000}
+.signin{height:clamp(44px,5.2vw,48px);padding:0 22px;border-radius:999px;background:var(--pill-dark);color:var(--sign-in-text);box-shadow:var(--nav-shadow);display:flex;align-items:center;font-weight:500;font-size:14px;transition:.2s}
+.signin:hover{background:#323234;color:#fff;transform:translateY(-1px)}
+.burger{display:none;width:48px;height:48px;border-radius:50%;background:var(--pill-dark);position:relative}
+.burger i{position:absolute;left:15px;width:18px;height:1.5px;background:#fff;transition:.3s}
+.burger i:nth-child(1){top:17px}.burger i:nth-child(2){top:23px}.burger i:nth-child(3){top:29px}
+.burger[aria-expanded=true]{background:#fff}.burger[aria-expanded=true] i{background:#000}
+.burger[aria-expanded=true] i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger[aria-expanded=true] i:nth-child(2){opacity:0}
+.burger[aria-expanded=true] i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.hero{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;max-width:900px;width:100%;min-height:0}
+.trust{--trust-size:clamp(36px,4.5vw,42px);display:inline-flex;align-items:center;margin-bottom:clamp(16px,2.5vh,26px)}
+.av{width:var(--trust-size);height:var(--trust-size);border-radius:50%;background:var(--trust-bg);border:1px solid var(--trust-border);padding:5px;transition:transform .35s;position:relative}
+.av span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:#fff;color:#111;font-size:calc(var(--trust-size)*.34)}
+.av+.av{margin-left:calc(var(--trust-size)*-.42)}
+.a1{z-index:1}.a2{z-index:2}.a3{z-index:4}.a1:hover{transform:translateY(-2px)}.a2:hover{transform:translateY(-4px)}.a3:hover{transform:translateY(-2px)}
+.tp{height:var(--trust-size);display:flex;align-items:center;border-radius:999px;background:var(--trust-bg);border:1px solid var(--trust-border);margin-left:calc(var(--trust-size)*-.42);padding:0 16px 0 calc(var(--trust-size)*.58);color:var(--trust-text);font-weight:500;font-size:clamp(12px,1.4vw,13.5px);z-index:3;white-space:nowrap}
+h1{font-family:var(--font-display);font-weight:400;font-size:clamp(28px,6.2vw,80px);letter-spacing:-.04em;line-height:1.12;color:#fff}
+h1 span{display:block;white-space:nowrap;overflow:hidden;opacity:0;animation:hf .85s cubic-bezier(.22,1,.36,1) forwards}
+h1 span:nth-child(1){animation-delay:.12s}h1 span:nth-child(2){animation-delay:.3s}
+.sub{max-width:min(500px,92%);margin:clamp(12px,2vh,20px) 0 clamp(16px,2.6vh,26px);font-size:clamp(calc(13.5px + 2pt),calc(1.55vw + 2pt),calc(16.5px + 2pt));color:#d0d0d0;opacity:.8;line-height:1.55}
+.cta{background:#fff;color:#000;font-weight:600;font-size:clamp(13.5px,1.5vw,14.5px);padding:clamp(11px,1.6vh,13px) clamp(22px,3vw,28px);border-radius:999px;box-shadow:0 0 0 1px rgba(255,255,255,.15),0 0 22px rgba(255,255,255,.32),0 0 44px rgba(255,255,255,.12);transition:.25s}
+.cta:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 0 0 1px rgba(255,255,255,.3),0 0 30px rgba(255,255,255,.5),0 0 60px rgba(255,255,255,.25)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;width:100%;max-width:920px;flex-shrink:0;text-align:center;padding-top:8px}
+.st i{display:block;font-style:normal;font-family:var(--font-display);font-size:clamp(22px,3vw,33px);line-height:1.1}
+.st b{display:block;font-weight:500;font-size:clamp(18px,2.2vw,26px);letter-spacing:-.025em;font-variant-numeric:tabular-nums}
+.st small{color:var(--muted);font-size:clamp(11px,1.2vw,12.5px)}
+.anim{opacity:0;transform:translateY(22px) scale(.98);filter:blur(6px);animation:reveal .85s cubic-bezier(.22,1,.36,1) var(--d,0s) forwards}
+.anim.pulse{animation-name:revealPulse}
+@keyframes reveal{to{opacity:1;transform:none;filter:none}}
+@keyframes revealPulse{60%{opacity:1;transform:scale(1.04);filter:none}to{opacity:1;transform:none;filter:none}}
+@keyframes hf{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes slideDown{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:none}}
+@keyframes overlayIn{from{opacity:0}}@keyframes menuIn{from{opacity:0;transform:translateY(-10px) scale(.97)}}@keyframes linkIn{from{opacity:0;transform:translateY(8px)}}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.62);backdrop-filter:blur(6px);animation:overlayIn .28s}
+.mmenu{position:fixed;left:14px;right:14px;top:84px;background:#fff;border-radius:28px;padding:22px 18px 20px;box-shadow:0 20px 60px rgba(0,0,0,.45);animation:menuIn .38s;display:flex;flex-direction:column;gap:6px;z-index:3}
+.mmenu a{position:relative;color:#2e2e2e;font-weight:500;padding:12px;text-align:center;animation:linkIn .4s both}
+.mmenu a.on::after{bottom:8px}.mmenu .signin{justify-content:center;background:#28282a;color:#c8c8c8}
+[hidden]{display:none!important}
+/* chat console */
+.con{position:fixed;z-index:5;right:clamp(8px,2vw,24px);bottom:clamp(8px,2vh,24px);top:clamp(8px,2vh,24px);width:min(460px,calc(100vw - 16px));background:rgba(12,12,14,.92);backdrop-filter:blur(14px);border:1px solid var(--trust-border);border-radius:22px;display:flex;flex-direction:column;overflow:hidden;animation:menuIn .35s}
+.con header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid #2a2a2c;font-weight:600;font-size:14px}
+.con header button{background:none;color:#c8c8c8;font-size:20px}
+.tabs{display:flex;gap:4px;padding:8px 12px}.tabs button{flex:1;padding:8px;border-radius:999px;background:#1c1c1e;color:#c8c8c8;font-size:12.5px}.tabs button.on{background:#fff;color:#000}
+.pane{flex:1;overflow:auto;padding:12px 16px;font-size:13.5px;line-height:1.5;display:none;min-height:0}.pane.on{display:block}
+.pane label{display:block;color:var(--muted);font-size:12px;margin:10px 0 4px}
+.pane input,.pane select{width:100%;padding:10px 12px;border-radius:12px;border:1px solid #333;background:#161618;color:#fff;font:inherit}
+.pane .btn{margin-top:12px;padding:10px 16px;border-radius:999px;background:#fff;color:#000;font-weight:600}
+.msg{margin:8px 0;padding:10px 12px;border-radius:14px;white-space:pre-wrap;word-break:break-word}
+.msg.u{background:#2a2a2d;margin-left:28px}.msg.a{background:#151517;border:1px solid #26262a;margin-right:20px}
+.trace{font-size:11.5px;color:var(--muted);font-family:var(--font-sans);margin:4px 0}
+.row{display:flex;gap:8px;padding:10px 12px;border-top:1px solid #2a2a2c}
+.row input{flex:1;padding:11px 14px;border-radius:999px;border:1px solid #333;background:#161618;color:#fff;font:inherit;min-width:0}
+.row button{padding:0 18px;border-radius:999px;background:#fff;color:#000;font-weight:600}
+.note{color:var(--muted);font-size:12px;margin-top:8px}
+canvas{max-width:100%;border-radius:10px;background:#000;margin-top:8px}
+body.menu-open{overflow:hidden}
+@media(max-width:720px){.nav,.header>.signin{display:none}.burger{display:block}.header{justify-content:space-between}.logo{width:48px;height:48px}h1{letter-spacing:-.08em;line-height:1.05}.stats{grid-template-columns:1fr 1fr;gap:10px}}
+@media(max-width:420px){h1{letter-spacing:-.09em;line-height:1.04}.trust{--trust-size:34px}.tp{font-size:12px}}
+@media(max-height:700px){.sub{margin:8px 0 12px}.trust{margin-bottom:10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.anim,h1 span{opacity:1;transform:none;filter:none}}
+.sec{position:relative;z-index:1;background:rgba(0,0,0,.84);backdrop-filter:blur(10px);padding:clamp(48px,9vh,96px) clamp(16px,5vw,64px)}
+.sec>div{max-width:1000px;margin:0 auto}.sec h2{font-family:var(--font-display);font-weight:400;font-size:clamp(26px,4vw,44px);letter-spacing:-.03em;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px 36px}.grid>div{border-top:1px solid var(--trust-border);padding-top:14px}
+.grid h3{font-size:15px;font-weight:600;margin-bottom:6px}.grid p,.sec p{color:#b5b5b5;font-size:14px;line-height:1.6}
+.ft{position:relative;z-index:1;background:#000;border-top:1px solid #2a2a2c;padding:36px clamp(16px,5vw,64px);color:var(--muted);font-size:13px}
+.ft div{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between}.ft a:hover{color:#fff}.ft nav{display:flex;gap:20px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="bg"><video class="bg-video" autoplay muted loop playsinline><source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260809_012548_ef22562c-c0ae-4816-ad9d-f8922af4e6a7.mp4" type="video/mp4"></video></div>
+<div class="page">
+<header class="header">
+<a class="logo" href="#" aria-label="Aetheris AI"><img alt="" width="52" height="52" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 6 8 56h10l14-32 14 32h10z' fill='%23000'/%3E%3Ccircle cx='32' cy='44' r='5' fill='%23000'/%3E%3C/svg%3E"></a>
+<nav class="nav"><a class="on" href="#">Home</a><a href="#features">Product</a><a href="#architecture">Case Studies</a><a href="#contact">Contact</a></nav>
+<a class="signin" href="#" data-tab="keys">Sign in</a>
+<button class="burger" id="bg" aria-expanded="false" aria-label="Menu"><i></i><i></i><i></i></button>
+</header>
+<div class="ov" id="ov" hidden></div>
+<div class="mmenu" id="mm" hidden><a class="on" href="#">Home</a><a href="#features">Product</a><a href="#architecture">Case Studies</a><a href="#contact">Contact</a><a class="signin" href="#" data-tab="keys">Sign in</a></div>
+<main class="hero">
+<div class="trust anim" style="--d:.05s"><div class="av a1"><span><i class="fa-brands fa-microsoft"></i></span></div><div class="av a2"><span><i class="fa-brands fa-amazon"></i></span></div><div class="av a3"><span><i class="fa-brands fa-google"></i></span></div><div class="tp">Trusted by 2000+ Enterprises</div></div>
+<h1 class="headline"><span>Intelligence</span><span>Designed To Evolve</span></h1>
+<p class="sub anim" style="--d:.28s">Build applications that reason, adapt and collaborate using a modular AI platform designed for production.</p>
+<button class="cta anim pulse" style="--d:.4s" id="go">Get Started</button>
+</main>
+<footer class="stats">
+<div class="st anim" style="--d:.5s"><i>&lt;</i><b data-t="120" data-s="ms" data-d="0">0ms</b><small>Inference Time</small></div>
+<div class="st anim" style="--d:.58s"><i>%</i><b data-t="99.99" data-s="%" data-d="2">0%</b><small>Platform Uptime</small></div>
+<div class="st anim" style="--d:.66s"><i>*</i><b data-t="24" data-s="/7" data-d="0">0/7</b><small>Autonomous Runtime</small></div>
+<div class="st anim" style="--d:.74s"><i>#</i><b data-t="2.4" data-s="M" data-d="1">0M</b><small>Context Windows</small></div>
+</footer>
+</div>
+
+<section class="sec" id="features"><div><h2>One platform, six layers</h2><div class="grid">
+<div><h3>Dual-engine gateway</h3><p>Groq for fast agent calls, Gemini for long documents. Models are auto-detected and failover is automatic.</p></div>
+<div><h3>Hybrid GraphRAG</h3><p>Vector search plus a temporal knowledge graph, so answers cite sources and follow how facts changed.</p></div>
+<div><h3>Agent swarm</h3><p>Compliance, security, FinOps and architecture agents plan, use tools and check each other.</p></div>
+<div><h3>Vision</h3><p>CNN feature maps for diagrams, layouts and telemetry heatmaps. Try it in the console.</p></div>
+<div><h3>Zero-trust security</h3><p>Post-quantum key exchange, mTLS, encrypted vault, sandboxed scripts and audit logs.</p></div>
+<div><h3>MCP ready</h3><p>Connect Claude Desktop or Cursor to query graph state and run pipelines.</p></div></div></div></section>
+<section class="sec" id="architecture"><div><h2>How a request flows</h2><div class="grid">
+<div><h3>1. Edge</h3><p>Nginx serves the site and applies security headers.</p></div>
+<div><h3>2. Guard</h3><p>FastAPI filters injection, redacts personal data and rate-limits by IP.</p></div>
+<div><h3>3. Retrieve</h3><p>TF-IDF today; Qdrant and Neo4j in the full build.</p></div>
+<div><h3>4. Route</h3><p>Groq or Gemini answers. If one fails, the other takes over.</p></div></div></div></section>
+<section class="sec" id="contact"><div><h2>Build with Aetheris</h2><p>Created by Nikhil Chary Sriramoju. Open the console, add a free key, and ask anything about the platform.</p></div></section>
+<footer class="ft"><div><span>&copy; 2026 Aetheris AI</span><nav><a href="#features">Product</a><a href="#architecture">Architecture</a><a href="https://github.com/Nikhil-creat" rel="noopener">GitHub</a></nav><span>Free-tier models. Answers can be wrong.</span></div></footer>
+<section class="con" id="con" hidden>
+<header>Aetheris Console <button id="x" aria-label="Close">&times;</button></header>
+<div class="tabs"><button data-tab="chat" class="on">Assistant</button><button data-tab="keys">Keys</button><button data-tab="swarm">Swarm</button><button data-tab="cnn">Vision</button><button data-tab="sec">Security</button></div>
+<div class="pane on" id="p-chat"><div id="log"><div class="msg a">I'm the Aetheris assistant. Add a free Groq or Gemini key under Keys, then ask about the platform. Try "calc: 12*(3+4)".</div></div></div>
+<div class="pane" id="p-keys">
+<label>Groq API key (free, console.groq.com)</label><input id="kg" type="password" autocomplete="off" placeholder="gsk_...">
+<label>Gemini API key (free, aistudio.google.com)</label><input id="kq" type="password" autocomplete="off" placeholder="AIza...">
+<label>Backend URL (optional, keeps keys on the server)</label><input id="be" placeholder="https://your-api.onrender.com"><label>Key storage</label><select id="ks"><option value="session">This tab only (safer)</option><option value="local">Remember on this device</option></select>
+<button class="btn" id="det">Save &amp; auto-detect models</button>
+<div id="mods" class="note"></div>
+<p class="note">Keys stay in your browser and go only to api.groq.com and generativelanguage.googleapis.com.</p></div>
+<div class="pane" id="p-swarm"><p>Four specialist agents (compliance, security, FinOps, architecture) plan together, then a judge scores the plan. Needs the Backend URL under Keys.</p><input id="sw" maxlength="600" placeholder="e.g. Review our API launch for risks"><button class="btn" id="swr">Run swarm</button><div id="swo" class="msg a" style="margin-top:10px" hidden></div></div><div class="pane" id="p-cnn"><p>Runs a 3x3 Sobel convolution (the first layer of a CNN) fully in your browser. Nothing is uploaded.</p><input type="file" id="img" accept="image/*"><canvas id="cv" width="300" height="200"></canvas><canvas id="cv2" width="300" height="200"></canvas><p class="note" id="cnote"></p></div>
+<div class="pane" id="p-sec"><p><b>Built in:</b> strict Content-Security-Policy (only Groq and Gemini can be called), no-referrer, prompt-injection filter, email/phone redaction before sending, 600-character input cap, 20 requests per minute limit, text rendered as plain text (no HTML injection), keys never in the code.</p><p class="note"><b>Limits:</b> a static site cannot hide a key from the person using it. Free-tier quotas apply, answers can be wrong, and the knowledge base is a small built-in sample. For shared or production use, move calls behind a server proxy (see the guide).</p></div>
+<div class="row" id="inrow"><input id="q" maxlength="600" placeholder="Ask Aetheris..." autocomplete="off"><button id="send">Send</button></div>
+</section>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+/* menu */
+const bg=$('#bg'),ov=$('#ov'),mm=$('#mm');
+function menu(o){bg.setAttribute('aria-expanded',o);ov.hidden=mm.hidden=!o;document.body.classList.toggle('menu-open',o)}
+bg.onclick=()=>menu(bg.getAttribute('aria-expanded')!=='true');ov.onclick=()=>menu(false);
+addEventListener('keydown',e=>{if(e.key==='Escape'){menu(false);$('#con').hidden=true}});
+addEventListener('resize',()=>{if(innerWidth>720)menu(false)});
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu(false)));
+mm.querySelectorAll('a').forEach((a,i)=>a.style.animationDelay=.08+i*.06+'s');
+/* count-up */
+const ease=t=>1-Math.pow(1-t,3);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);const el=e.target,i=$$('.st b').indexOf(el),T=+el.dataset.t,D=+el.dataset.d,dur=1500+i*80;
+setTimeout(()=>{const t0=performance.now();(function f(n){const p=Math.min(1,(n-t0)/dur);el.textContent=(T*ease(p)).toFixed(D)+el.dataset.s;if(p<1)requestAnimationFrame(f)})(t0)},480+i*90)}),{threshold:.25});
+$$('.st b').forEach(b=>io.observe(b));
+/* console */
+function tab(n){$('#con').hidden=false;menu(false);$$('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===n));$$('.pane').forEach(p=>p.classList.toggle('on',p.id==='p-'+n));$('#inrow').hidden=n!=='chat'}
+$$('[data-tab]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();tab(b.dataset.tab==='rag'?'chat':b.dataset.tab)}));
+$('#go').onclick=()=>tab('chat');$('#x').onclick=()=>$('#con').hidden=true;
+/* keys + model auto-detect */
+const store=()=>$('#ks').value==='local'?localStorage:sessionStorage;
+const K={groq:'',gem:'',gm:'',mm:''};
+try{K.groq=sessionStorage.ak_g||localStorage.ak_g||'';K.gem=sessionStorage.ak_q||localStorage.ak_q||'';$('#kg').value=K.groq;$('#kq').value=K.gem}catch(e){}
+async function detect(){
+ K.groq=$('#kg').value.trim();K.gem=$('#kq').value.trim();K.gm=K.mm='';const out=[];
+ try{sessionStorage.removeItem('ak_g');sessionStorage.removeItem('ak_q');localStorage.removeItem('ak_g');localStorage.removeItem('ak_q');store().ak_g=K.groq;store().ak_q=K.gem}catch(e){}
+ if(K.groq)try{const r=await fetch('https://api.groq.com/openai/v1/models',{headers:{Authorization:'Bearer '+K.groq}});if(!r.ok)throw r.status;
+  const ids=(await r.json()).data.map(m=>m.id).filter(i=>!/whisper|guard|tts|orpheus|playai|safeguard/i.test(i));
+  K.gm=['llama-3.3-70b','llama-3.1-70b','llama-3','llama','qwen','gpt-oss'].map(p=>ids.find(i=>i.includes(p))).find(Boolean)||ids[0];out.push('Groq: '+K.gm)}catch(e){out.push('Groq: key rejected or blocked ('+e+')')}
+ if(K.gem)try{const r=await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=100',{headers:{'x-goog-api-key':K.gem}});if(!r.ok)throw r.status;
+  const ms=(await r.json()).models.filter(m=>(m.supportedGenerationMethods||[]).includes('generateContent')&&/gemini/.test(m.name)&&!/tts|image|embed|live|audio|thinking/i.test(m.name));
+  K.mm=(ms.find(m=>/flash/.test(m.name)&&!/lite|preview|exp/.test(m.name))||ms.find(m=>/flash/.test(m.name))||ms[0]||{}).name||'';out.push('Gemini: '+(K.mm||'no usable model'))}catch(e){out.push('Gemini: key rejected or blocked ('+e+')')}
+ $('#mods').textContent=out.join(' | ')||'Add at least one key.'}
+$('#det').onclick=detect;
+/* RAG knowledge base + retrieval */
+const KB=[
+['Gateway','The multi-LLM gateway routes fast agent tool calls to Groq and long-context multimodal work to Gemini, with automatic failover, token budgeting and Redis semantic caching.'],
+['GraphRAG','Hybrid retrieval fuses Qdrant vector search with Neo4j temporal graph traversal so answers follow multi-hop relationships and how rules changed over time.'],
+['Agents','A LangGraph swarm of Compliance Auditor, Security Sentinel, FinOps Optimizer and Neural Architect agents collaborates on incidents and improves through AI feedback.'],
+['Vision','A PyTorch CNN segments document layouts, architecture diagrams and telemetry heatmaps into feature maps for anomaly detection.'],
+['Security','Post-quantum Kyber and Dilithium, AES-256 vault encryption, mTLS between services, zero-knowledge compliance proofs and a sandboxed Wasm runtime for user scripts.'],
+['MCP','The Model Context Protocol server lets Claude Desktop and Cursor query graph state and trigger pipelines securely.'],
+['Deploy','Ships as Docker Compose for local use and a Kubernetes operator for scaling Ray and Celery worker meshes with checkpoint recovery.']];
+const tk=s=>s.toLowerCase().match(/[a-z0-9]{3,}/g)||[];
+function retrieve(q){const qt=tk(q);return KB.map(([t,x])=>{const w=tk(t+' '+x);return[qt.reduce((s,a)=>s+w.filter(b=>b===a||(a.length>4&&b.startsWith(a.slice(0,5)))).length,0),t,x]}).filter(r=>r[0]>0).sort((a,b)=>b[0]-a[0]).slice(0,3)}
+/* guardrails */
+const INJ=/ignore (all|previous|prior)|system prompt|reveal.*(key|prompt)|jailbreak|developer mode/i;
+const redact=s=>s.replace(/[\w.+-]+@[\w-]+\.[\w.]+/g,'[email]').replace(/\+?\d[\d\s-]{8,}\d/g,'[number]');
+let hits=[];const rate=()=>{const n=Date.now();hits=hits.filter(t=>n-t<6e4);if(hits.length>=20)return false;hits.push(n);return true};
+const calc=s=>{const m=s.match(/^calc:\s*([\d\s+\-*/().%]+)$/i);if(!m)return null;try{return String(Function('"use strict";return('+m[1]+')')())}catch(e){return 'invalid expression'}};
+/* chat */
+const hist=[];try{$('#be').value=localStorage.ak_be||''}catch(e){}
+$('#be').oninput=()=>{try{localStorage.ak_be=$('#be').value.trim()}catch(e){}};
+const be=()=>$('#be').value.trim().replace(/\/$/,'');
+function add(c,t){const d=document.createElement('div');d.className=c;d.textContent=t;$('#log').append(d);$('#p-chat').scrollTop=1e9;return d}
+async function callGroq(sys,h){const r=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+K.groq},body:JSON.stringify({model:K.gm,messages:[{role:'system',content:sys},...h],temperature:.3,max_tokens:600})});if(!r.ok)throw 'Groq '+r.status;return(await r.json()).choices[0].message.content}
+async function callGem(sys,h){const r=await fetch('https://generativelanguage.googleapis.com/v1beta/'+K.mm+':generateContent',{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':K.gem},body:JSON.stringify({systemInstruction:{parts:[{text:sys}]},contents:h.map(m=>({role:m.role==='user'?'user':'model',parts:[{text:m.content}]})),generationConfig:{temperature:.3,maxOutputTokens:600}})});if(!r.ok)throw 'Gemini '+r.status;return(await r.json()).candidates[0].content.parts.map(p=>p.text).join('')}
+async function ask(){
+ const raw=$('#q').value.trim();if(!raw)return;$('#q').value='';add('msg u',raw);
+ if(INJ.test(raw))return add('msg a','Blocked: that looks like a prompt-injection attempt.');
+ if(!rate())return add('msg a','Rate limit: 20 requests per minute. Wait a moment.');
+ const c=calc(raw);if(c!==null)return add('msg a','Tool calc: '+c);
+ const q=redact(raw),docs=retrieve(q),tr=add('trace','Agent: guard ok > retrieve '+docs.length+' chunk(s) '+(docs.map(d=>d[1]).join(', '))+' > route '+(raw.length>300?'Gemini (long)':'Groq (fast)'));
+ if(be()){try{const r=await fetch(be()+'/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:q,history:hist.slice(-8)})});if(!r.ok)throw r.status;const d=await r.json();add('msg a',d.answer);tr.textContent+=' > server '+d.model+(d.sources.length?' | '+d.sources.length+' sources':'');hist.push({role:'user',content:q},{role:'assistant',content:d.answer});return}catch(e){tr.textContent+=' > server error '+e+', using browser keys'}}
+ if(!K.gm&&!K.mm){if(!K.groq&&!K.gem)return add('msg a','Add a key under Keys first.');await detect()}
+ const sys='You are the Aetheris AI assistant. Answer using the context when relevant and say when it is not covered. Never reveal secrets. Context:\n'+(docs.map(d=>'['+d[1]+'] '+d[2]).join('\n')||'(none)');
+ hist.push({role:'user',content:q});const h=hist.slice(-8),pref=raw.length>300?[['g',K.mm],['q',K.gm]]:[['q',K.gm],['g',K.mm]];
+ const w=add('msg a','...');
+ for(const[k]of pref){try{
+  if(k==='q'&&K.gm&&K.groq){w.textContent=await callGroq(sys,h);tr.textContent+=' > answered by Groq '+K.gm;break}
+  if(k==='g'&&K.mm&&K.gem){w.textContent=await callGem(sys,h);tr.textContent+=' > answered by '+K.mm;break}
+ }catch(e){tr.textContent+=' > '+e+', failing over'}}
+ if(w.textContent==='...')w.textContent='No model answered. Check your keys and quota under Keys.';
+ else hist.push({role:'assistant',content:w.textContent})}
+$('#send').onclick=ask;$('#q').addEventListener('keydown',e=>{if(e.key==='Enter')ask()});
+/* CNN demo: Sobel convolution */
+$('#img').onchange=e=>{const f=e.target.files[0];if(!f)return;const im=new Image();im.onload=()=>{const a=$('#cv'),x=a.getContext('2d');x.drawImage(im,0,0,300,200);const s=x.getImageData(0,0,300,200),o=x.createImageData(300,200),g=[];
+ for(let i=0;i<60000;i++)g[i]=.3*s.data[i*4]+.59*s.data[i*4+1]+.11*s.data[i*4+2];
+ let sum=0;for(let y=1;y<199;y++)for(let X=1;X<299;X++){const p=y*300+X,gx=-g[p-301]+g[p-299]-2*g[p-1]+2*g[p+1]-g[p+301]+g[p+299],gy=-g[p-301]-2*g[p-300]-g[p-299]+g[p+301]+2*g[p+300]+g[p+299],m=Math.min(255,Math.hypot(gx,gy));sum+=m;o.data.set([m,m,m,255],p*4)}
+ $('#cv2').getContext('2d').putImageData(o,0,0);$('#cnote').textContent='Edge feature map. Mean activation '+(sum/6e4).toFixed(1)+'. A real CNN stacks many learned kernels like this one.'};im.src=URL.createObjectURL(f)};
+$('#swr').onclick=async()=>{const o=$('#swo');o.hidden=false;if(!be())return o.textContent='Set a Backend URL under Keys first.';o.textContent='Agents working...';try{const r=await fetch(be()+'/api/swarm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({task:$('#sw').value})});if(!r.ok)throw r.status;const d=await r.json();o.textContent=d.notes.join('\n\n')+'\n\nPLAN ('+d.engine+', judge score '+d.score+'/10):\n'+d.plan}catch(e){o.textContent='Swarm failed: '+e}};
+</script>
+</body>
+</html>
